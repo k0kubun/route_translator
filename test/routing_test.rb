@@ -91,8 +91,8 @@ class TranslateRoutesTest < ActionController::TestCase
   def test_block_constraints_remain_obeyed
     draw_routes do
       localized do
-        get 'products', to: 'zambonis#index', constraints: -> (_req) { false }
-        get 'products', to: 'products#index', constraints: -> (_req) { true }
+        get 'products', to: 'zambonis#index', constraints: ->(_req) { false }
+        get 'products', to: 'products#index', constraints: ->(_req) { true }
       end
     end
 
